@@ -1,0 +1,35 @@
+header{
+    padding: 10px 20px;
+   display: flex;
+   align-items: center;
+   height:70px;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.303);
+}
+.menu{
+   transition: .4s;
+   position: relative;
+   cursor: pointer;
+   left: 0;
+   z-index: 5;
+}
+.left-move{
+    left: 190px;
+   
+}
+.menu i{
+    font-size:1.4rem;
+    margin-left: 10px;
+    transition: .4s;
+   
+}
+.menu small{
+    margin: 0px 5px;
+    color:#777;
+    position: relative;
+    top:-20px;
+}
+.logo{
+    width:130px;
+    margin:0 auto;
+
+}

@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Header from './partials/Header'
+import NewsFeed from './partials/NewsFeed'
+import './partials/CSS/style.css'
+import { BrowserRouter as Router, useParams, Route, Switch, Redirect, Link } from 'react-router-dom'
+const Feed = () => {
+    let { category } = useParams() 
+    return <NewsFeed category={category} />
+}
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <Router>
+            <Header />
+            <Switch>
+                <Route exact path='/:category'>
+                    <Feed />
+                </Route>
+                <Redirect to='/all' />
+
+            </Switch>
+
+        </Router>
+    )
 }
 
 export default App;
