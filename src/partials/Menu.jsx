@@ -5,11 +5,11 @@ function Menu(props){
         <div className={`menu-container ${props.class}`}>
             <div className="lang">
                 <a href="#" className='en active'>English</a>
-                <a href="#" className='hi'>हिन्दी</a>
+                <a href="#" className='hi' disabled>हिन्दी</a>
             </div>
             <p>Categories</p>
             <ul className="topics-list">
-                <li className='active'>All news</li>
+                <li className='active'> <a href="all"> All </a></li>
                 <li>
                     <a href="india">India</a>
                 </li>
