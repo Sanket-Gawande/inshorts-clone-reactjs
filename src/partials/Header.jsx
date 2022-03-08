@@ -11,7 +11,7 @@ function Header(){
         else {icons = 'fa-bars' ; text = 'Menu' ; class_name= ''  ; state = 'closed'}
 
         setStatus({state : state ,text: text , icon  : icons , class: class_name})
-         console.log(icons)
+         
     }
         
     return(
@@ -21,15 +21,10 @@ function Header(){
                 <small>{status.text}</small>
             </div>
             <img src={logo} alt="" className="logo" />
-             <Menu class = {status.state} />
+             <Menu class={status.state}  menuToggle={menuToggle}/>
         </header>
     )
 }
 
 
-// function for menu interaction
-// function menuToggle(){
-//     setStatus({icon : new_icon,state : !state})
-//  }
- 
 export default Header;

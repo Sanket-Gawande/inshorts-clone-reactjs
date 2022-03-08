@@ -1,11 +1,8 @@
 import Header from './partials/Header'
 import NewsFeed from './partials/NewsFeed'
 import './partials/CSS/style.css'
-import { BrowserRouter as Router, useParams, Route, Switch, Redirect, Link } from 'react-router-dom'
-const Feed = () => {
-    let { category } = useParams() 
-    return <NewsFeed category={category} />
-}
+import { BrowserRouter as Router,  Route, Switch, Redirect } from 'react-router-dom'
+
 function App() {
 
     return (
@@ -13,7 +10,7 @@ function App() {
             <Header />
             <Switch>
                 <Route exact path='/:category'>
-                    <Feed />
+                    <NewsFeed />
                 </Route>
                 <Redirect to='/all' />
 
